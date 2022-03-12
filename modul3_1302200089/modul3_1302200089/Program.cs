@@ -11,10 +11,40 @@ namespace modul3_1302200089
     {
         static void Main(string[] args)
         {
+            //soal buah
             KodeBuah fruit = new KodeBuah();
 
-            string buahBaru = fruit.getKodeBuah(KodeBuah.buah.Kurma);
-            Console.WriteLine(buahBaru);
+            String buahBaru = fruit.getKodeBuah(KodeBuah.buah.Apel);
+            Console.WriteLine("Apel -> "+buahBaru);
+
+            Console.WriteLine("\n");
+
+            //soal game
+            PosisiKarakterGame game = new PosisiKarakterGame();
+            Console.WriteLine("State sekarang = " + game.currentState);
+            Console.WriteLine("\n");
+
+            game.activeTrigger(PosisiKarakterGame.Trigger.TombolW);
+            Console.WriteLine("State sekarang = " + game.currentState);
+            Console.WriteLine("\n");
+
+            game.activeTrigger(PosisiKarakterGame.Trigger.TombolX);
+            Console.WriteLine("State sekarang = " + game.currentState);
+            Console.WriteLine("\n");
+
+            game.activeTrigger(PosisiKarakterGame.Trigger.TombolS);
+            Console.WriteLine("State sekarang = " + game.currentState);
+            Console.WriteLine("\n");
+
+            game.activeTrigger(PosisiKarakterGame.Trigger.TombolW);
+            Console.WriteLine("State sekarang = " + game.currentState);
+            Console.WriteLine("\n");
+
+            game.activeTrigger(PosisiKarakterGame.Trigger.TombolW);
+            Console.WriteLine("State sekarang = " + game.currentState);
+            Console.WriteLine("\n");
+
+            Console.WriteLine("Selesai!");
         }
     }
 
